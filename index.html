@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="index.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="index.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Okaidi Front-End Exercise</title>
+    </head>
+    <body>
+        <!-- Here a loader is created which
+			loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status" id="loading">
+                <img src="loader.gif" alt="" />
+            </div>
+        </div>
+
+        <div id="global__container">
+            <h1>Pick an answer</h1>
+
+            <div id="question__container">
+                <h2 id="question"></h2>
+            </div>
+
+            <div id="hidden__values">
+                <input type="hidden" id="response" />
+                <input type="hidden" id="position" /> <br />
+            </div>
+
+            <div id="answers__container">
+                <div id="answers"></div>
+            </div>
+
+            <div id="notification">
+                <p id="success" class="notification">True 🎉🎉</p>
+                <p id="fail" class="notification">False 😓😓</p>
+                <p id="terminer" class="notification">Terminated 🔥🔥</p>
+            </div>
+
+            <div id="buttons__block">
+                <button id="btn_check" onclick="checkResponse()">
+                    Check response
+                </button>
+                <button id="btn_next" onclick="next()">Next question</button>
+                <button id="btn_reset" style="display: none" onclick="reset()">
+                    Reset question
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
